@@ -2,14 +2,14 @@ import dev.kordex.gradle.plugins.docker.file.*
 import dev.kordex.gradle.plugins.kordex.DataCollection
 
 plugins {
-	kotlin("jvm")
-	kotlin("plugin.serialization")
+	alias(libs.plugins.kotlin.jvm)
+	alias(libs.plugins.kotlin.serialization)
 
-	id("com.github.johnrengelman.shadow")
-	id("io.gitlab.arturbosch.detekt")
+	alias(libs.plugins.shadow)
+	alias(libs.plugins.detekt)
 
-	id("dev.kordex.gradle.docker")
-	id("dev.kordex.gradle.kordex")
+	alias(libs.plugins.kordex.docker)
+	alias(libs.plugins.kordex.plugin)
 }
 
 group = "template"
@@ -30,7 +30,8 @@ dependencies {
 }
 
 kordEx {
-	kordExVersion = "2.3.1-SNAPSHOT"
+	// https://github.com/gradle/gradle/issues/31383
+	kordExVersion = libs.versions.kordex.asProvider()
 
 	bot {
 		// See https://docs.kordex.dev/data-collection.html
