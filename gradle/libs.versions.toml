@@ -1,6 +1,6 @@
 [versions]
 detekt = "1.23.6"
-kotlin = "2.0.20"
+kotlin = "2.0.21"
 
 groovy = "3.0.22"
 jansi = "2.4.1"
@@ -8,7 +8,7 @@ kx-ser = "1.7.2"
 logback = "1.5.7"
 logback-groovy = "1.14.5"
 logging = "7.0.0"
-kordex-gradle = "1.5.1"
+kordex-gradle = "1.5.8"
 kordex = "2.3.1-SNAPSHOT"
 
 [libraries]
